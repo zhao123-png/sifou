@@ -22,6 +22,7 @@
             height: 10px;
         }
         /*媒体查询 大屏轮播*/
+        
         @media (min-width:992px) {
             .carousel-indicators {
                 width: 100%;
@@ -29,18 +30,20 @@
                 margin-bottom: -5px;
             }
         }
-				/* 媒体查询 认识 div 中屏幕 消失*/
-				@media (min-width:768px) and (max-width:991px){
-					#know-content{
-						display:none;
-					}
-				}
-				/*媒体查旬 认识div小屏幕消失*/
-				@media  (max-width:767px){
-					#know-content{
-						display:none;
-					}
-				}
+        /* 媒体查询 认识 div 中屏幕 消失*/
+        
+        @media (min-width:768px) and (max-width:991px) {
+            #know-content {
+                display: none;
+            }
+        }
+        /*媒体查旬 认识div小屏幕消失*/
+        
+        @media (max-width:767px) {
+            #know-content {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -67,7 +70,7 @@
                     </div>
                 </ul>
                 <input type="text" id="search" placeholder="搜索问题或输入关键字">
-                <button id="searchBtn"></button>
+                <!-- <button id="searchBtn"></button> -->
                 <a href="sf_login.html" id="login" class="d-md-none d-lg-block">立即登录</a>
                 <a href="#" id="reg" class="d-md-none d-lg-block">免费注册</a>
             </header>

@@ -32,8 +32,8 @@
     left: 40px;
 }
 
-.header ul li:hover{
-	background:rgba(117,117,117,0.1);
+.header ul li:hover {
+    background: rgba(117, 117, 117, 0.1);
 }
 
 .header ul li:first-child a:first-child {
@@ -50,8 +50,14 @@
     position: relative;
     border: 1px solid #ccc;
     right: 45px;
+    background-image: url(../img/header/search.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 97%;
 }
 
+
+/* 
 button[id="searchBtn"] {
     background-image: url(../img/header/search.png);
     background-repeat: no-repeat;
@@ -65,6 +71,7 @@ button[id="searchBtn"] {
     border: 0;
     cursor: pointer;
 }
+ */
 
 .header ul li a {
     margin: auto 0;
@@ -83,7 +90,7 @@ button[id="searchBtn"] {
     margin-right: 15px;
     position: relative;
     right: 30px;
-	top:15px;
+    top: 15px;
     color: #009a61;
     font-size: 14px;
 }
@@ -92,24 +99,25 @@ button[id="searchBtn"] {
     position: relative;
     left: 110px;
     font-size: 20px;
-	top:3px;
+    top: 3px;
 }
 
-.header a[id="seg"] span{
-	font-weight:bold;
-	font-size:25px;
+.header a[id="seg"] span {
+    font-weight: bold;
+    font-size: 25px;
 }
 
-.header a[id="seg"] #sf_span_1{
-	color:#000;
-}
-.header a[id="seg"] #sf_span_2{
-	color:#009a61;
+.header a[id="seg"] #sf_span_1 {
+    color: #000;
 }
 
- a[id="reg"] {
+.header a[id="seg"] #sf_span_2 {
+    color: #009a61;
+}
+
+a[id="reg"] {
     position: relative;
-	top:10px;
+    top: 10px;
     right: 8%;
     background-color: #009a61;
     width: 80px;
@@ -118,10 +126,9 @@ button[id="searchBtn"] {
     line-height: 30px;
     padding: 0 10px;
     text-align: center;
-    color:#fff;
+    color: #fff;
     font-size: 14px;
 }
-
 
 div[id="know-content"] {
     width: 100%;
@@ -133,4 +140,3 @@ button[id="closeKnow"] {
     position: absolute;
     right: 3px;
 }
-
