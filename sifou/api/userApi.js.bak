@@ -1,0 +1,84 @@
+const express=require("express");
+const pool=require("../pool.js");
+var router=express.Router();
+//用户登录
+router.get("/v1/login/:sphone-:spwd",(req,res)=>{
+	var obj=req.params;
+	pool.query("select * from sifou_reg where sphone=? and spwd=?",[obj.sphone,obj.spwd],(err,result)=>{
+		if(err)throw err;
+		if(result.length==1){
+			res.send("1");
+		}else{
+			res.send("0");
+		}
+	});
+});
+
+//查询帖子
+router.get("/v1/list",(req,res)=>{
+	pool.query("select * from sifou_public",(err,result)=>{
+		if(err)throw err;
+		res.send(result);
+	});
+});
+
+//发布帖子
+router.post("/v1/public",(req,res)=>{
+	var obj=req.body;
+	obj.greate=Number(obj.greate);
+	obj.reader=Number(obj.reader);
+	
+	pool.query("insert into sifou_public set ? ",[obj],(err,result)=>{
+		if(err) throw err;
+		if(result. affectedRows==1){
+			res.send("1");
+		}else{
+			res.send("0");
+		}
+	});
+});
+
+
+//用户注册
+router.post("/v1/reg",(req,res)=>{
+	var obj=req.body;
+	pool.query("insert into sifou_reg set ?",[obj],(err,result)=>{
+		if(err)throw err;
+		if(result.affectedRows==1){
+			res.send("1");
+		}else{
+			res.send("0");
+		}
+	});
+});
+
+//修改密码
+router.put("/v1/updpwd",(req,res)=>{
+	var obj=req.body;
+	pool.query("update sifou_reg set spwd=? where sphone=?",[obj.spwd,obj.sphone],(err,result)=>{
+		if(err)throw err;
+		console
+		if(result.affectedRows==1){
+			res.send("1");
+		}else{
+			res.send("0");
+		}
+	});
+
+});
+
+//查询密码
+router.get("/v1/checkpwd/:sphone",(req,res)=>{
+	var $sphone=req.params.sphone;
+	pool.query("select * from sifou_reg where sphone=?",[$sphone],(err,result)=>{
+		if(err)throw err;
+		//console.log(result);
+		if(result.length==1){
+			res.send(result[0].spwd);
+		}else{
+			res.send("0");
+		}
+		
+	});
+});
+module.exports=router;

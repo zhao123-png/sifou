@@ -1,0 +1,136 @@
+/*��������Դ��߾�*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 4px solid rgb(0, 154, 97);
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.header ul li {
+    width: 38px;
+    margin: 0 12px;
+    height: 34px;
+    text-align: center;
+    font-size: 17px;
+    color: #b8b8b8;
+    position: relative;
+    left: 40px;
+}
+
+.header ul li:hover{
+	background:rgba(117,117,117,0.1);
+}
+
+.header ul li:first-child a:first-child {
+    color: rgb(0, 154, 97);
+}
+
+.header input[id="search"] {
+    width: 250px;
+    height: 34px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 5px;
+    position: relative;
+    border: 1px solid #ccc;
+    right: 45px;
+}
+
+button[id="searchBtn"] {
+    background-image: url(../img/header/search.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 10px;
+    right:32%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    cursor: pointer;
+}
+
+.header ul li a {
+    margin: auto 0;
+    text-decoration: none;
+}
+
+.header a[id="drop-dow"] {
+    position: relative;
+    left: 30px;
+    bottom: 6px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header a[id="login"] {
+    margin-right: 15px;
+    position: relative;
+    right: 30px;
+	top:15px;
+    color: #009a61;
+    font-size: 14px;
+}
+
+.header a[id="seg"] {
+    position: relative;
+    left: 110px;
+    font-size: 20px;
+	top:3px;
+}
+
+.header a[id="seg"] span{
+	font-weight:bold;
+	font-size:25px;
+}
+
+.header a[id="seg"] #sf_span_1{
+	color:#000;
+}
+.header a[id="seg"] #sf_span_2{
+	color:#009a61;
+}
+
+ a[id="reg"] {
+    position: relative;
+	top:10px;
+    right: 8%;
+    background-color: #009a61;
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    color:#fff;
+    font-size: 14px;
+}
+
+
+div[id="know-content"] {
+    width: 100%;
+    height: 150px;
+    background: #009a61;
+}
+
+button[id="closeKnow"] {
+    position: absolute;
+    right: 3px;
+}
+

@@ -1,0 +1,11 @@
+#d1{
+	width:60%;
+	background-color:black;
+	margin:0 auto;
+}
+
+#d1 div{
+	height:150px;
+	width:400px;
+	background-color:red;
+}

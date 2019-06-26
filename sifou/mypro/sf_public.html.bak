@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function public(){
+		
+			var date=new Date().toLocaleString();
+			var xhr=new XMLHttpRequest();
+			if(!internet.value){alert();return;}
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					if(result==1){
+						alert("发布成功");
+						window.location.href="sf_list.html";
+					}else{
+						alert("发布失败");
+					}
+				}
+			}
+			xhr.open("post","/userapi/v1/public",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			//帖子编号pid 网址 internet  链接标题title 频道 type  标签  property 描述 des 时间 date 点赞数 greate 用户名称 sname 阅读次数 reader
+			var formdata="internet="+internet.value+"&title="+title.value+"&type="+type.value+"&property="+property.value+"&des="+des.value+"&dateTi="+date+"&greate="+0+"&sname="+sname.value+"&reader="+0;
+			xhr.send(formdata);
+		}
+	</script>
+</head>
+<body>
+	 <!-- 帖子编号pid 网址 internet  链接标题title 频道type  标签property 描述des 时间date 点赞数greate 用户名称 sname 阅读次数 reader
+-->
+	
+	网址<input type="text" id="internet"><br>
+	链接标题<input type="text" id="title"><br>
+	频道<input type="text" id="type"><br>
+	标签<input type="text" id="property"><br>
+	描述<input type="text" id="des"><br>
+	用户名称<input type="text" id="sname"><br>
+
+	<button onclick="public()">发布</button>
+	
+</body>
+</html>

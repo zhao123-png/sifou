@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/sf_list.css">
+	<link rel="stylesheet" href="./css/sf_header.css">
+	<script src="./js/sf.js"></script>	
+</head>
+<body onload="list()">
+<!--网页头部 	 -->
+		<header class="header">
+				<a href="#" id="seg">SegmentFault</a>
+				<ul>
+					<li><a href="">首页</a></li>
+					<li><a href="">问答</a></li>
+					<li><a href="">专栏</a></li>
+					<li><a href="">课程</a></li>
+					<li><a href="">圈子</a></li>
+					<li><a href="">发现</a></li>
+				</ul>
+			<input type="text" id="search" placeholder="搜索问题或输入关键字">
+			<a href="sf_login.html" id="login">立即登录</a>
+			<a href="#" id="reg">免费注册</a>
+		</header>
+
+		<div></div>
+<!--网页内容  -->
+		<div  class="content">
+<!--左栏  -->
+			<aside class="left"></aside>
+<!--  中栏-->
+			<section class="center" id="center">
+				<div class="img-rev">
+					
+				</div>
+			</section>
+<!-- 	右栏		 -->
+			<div class="right"></div>
+		</div>
+	
+</body>
+</html>

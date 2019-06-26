@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<script>
+			function checkPwd(){
+			
+				var getUrl=new URLSearchParams(location.search);
+				var getPar=getUrl.get("sphone");
+//				console.log(getPar);
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						//存储数据库获取的密码
+						var result=xhr.responseText;
+						if(result==spwd.value){
+							sp1.innerHTML="原始密码和原密码相同";
+							btn1..removeAttribute(name)("disabled","true");
+						}else if(result!=spwd.value){
+							sp1.innerHTML="原始密码和原密码不相同";
+							btn1.setAttribute("disabled","false");
+						}
+					}
+				}
+				if(!spwd.value){
+					sp1.innerHTML="原始密码不能为空";
+					return;
+				}
+				if(!spw1.value){
+					sp3.innerHTML="新密码不能为空";
+				}
+				xhr.open("get","/userApi/v1/checkpwd/"+getPar,true);
+				xhr.send();
+			}
+
+			function getSphone(){
+				var getUrl=new URLSearchParams(location.search);
+				var getPar=getUrl.get("sphone");
+				sphone.value=getPar;
+			}
+			//修改密码方法
+			function updpwd(){
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						if(result==1){
+							alert("修改成功");
+						}else{
+							alert("修改失败");
+						}
+					}
+				}	
+					if(spw1.value===""){
+						alert("原始密码不正确");
+						return;
+					}
+					xhr.open("put","/userApi/v1/updpwd",true);
+					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+					var formdata="sphone="+sphone.value+"&spwd="+spw1.value;
+					xhr.send(formdata);
+			}
+			//给新密码进行验证
+			function right(){
+				if(spw1.value){
+					sp3.innerHTML=" ";
+				}
+			}
+	</script>
+<body onload="getSphone()">
+<!--disabled 设置可读 不可修改 	 -->
+	手机号<input type="text" disabled="disabled" id="sphone">
+	<br>
+	请输入原始密码<input onblur="checkPwd()" type="password" id="spwd">
+	<span id="sp1"></span>
+	<br>
+	请输入新密码<input onblur="right()"  type="password" id="spw1">
+	<span id="sp3"></span>
+	<br>
+	<button onclick="updpwd()" id="btn1">修改</button>
+</body>
+</html>

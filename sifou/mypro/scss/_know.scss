@@ -1,0 +1,71 @@
+$green_color:rgb(0, 154, 97);
+@mixin logio-width() {
+    width: 16px;
+    margin-right: 8px;
+}
+
+div[id="know-content"] {
+    background-image: url(../img/known/banner-bg.svg);
+    background-repeat: no-repeat;
+    background-position: 70% 10%;
+    .know-content-btn {
+        position: relative;
+        left: 15%;
+        top: -15%;
+    }
+}
+
+div[id="know-content-child"] {
+    width: 36%;
+    margin-left: 15%;
+}
+
+a[id="reg_know"] {
+    margin-right: 10px;
+    color: $green_color;
+}
+
+a[id="login_know"] {
+    &:hover {
+        background-color: rgba(238, 238, 238, 0.123);
+        color: #fff;
+    }
+}
+
+p[id="know_des"] {
+    font-size: 14.5px;
+}
+
+div[id="left-top"] {
+    ul {
+        li {
+            margin-bottom: 5px;
+            i {
+                color: #757575;
+            }
+            a {
+                color: #757575;
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+#left-bottom {
+    ul {
+        li {
+            margin-bottom: 5px;
+            a {
+                img {
+                    @include logio-width();
+                }
+                span {
+                    font-size: 15px;
+                    color: #757575;
+                }
+            }
+        }
+    }
+}

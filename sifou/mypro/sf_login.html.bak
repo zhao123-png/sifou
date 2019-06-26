@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户登录</title>
+	<script>
+		function login(){
+			var xhr=new XMLHttpRequest();
+				if(!sphone){
+					alert("手机号不能为空");
+					return;
+				}
+				if(!spwd){
+					alert("密码不能为空");
+					return;
+				}
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					if(result==1){
+						alert("登录成功");
+					}else{
+						alert("登录失败");
+					}
+				}
+			}	
+				xhr.open("get","/userapi/v1/login/"+sphone.value+"-"+spwd.value,true);
+				xhr.send(null);
+		}
+	</script>
+</head>
+<body>
+		手机号<input type="text" placeholder="请输入手机号" id="sphone"><br>
+		密码 <input type="password" placeholder="请输入密码" id="spwd"><br>
+		<button onclick="login()">登录</button>
+</body>
+</html>
