@@ -47,17 +47,15 @@
     box-sizing: border-box;
     padding: 10px;
     margin-top: 5px;
-    position: relative;
+    /* position: relative; */
     border: 1px solid #ccc;
-    right: 45px;
-    background-image: url(../img/header/search.png);
+    /* right: 45px; */
+    /* background-image: url(../img/header/search.png);
     background-repeat: no-repeat;
     background-size: 24px;
-    background-position: 97%;
+    background-position: 97%; */
 }
 
-
-/* 
 button[id="searchBtn"] {
     background-image: url(../img/header/search.png);
     background-repeat: no-repeat;
@@ -66,12 +64,11 @@ button[id="searchBtn"] {
     height: 28px;
     position: absolute;
     top: 10px;
-    right:32%;
+    right: 0;
     background-color: rgba(0, 0, 0, 0);
     border: 0;
     cursor: pointer;
 }
- */
 
 .header ul li a {
     margin: auto 0;
