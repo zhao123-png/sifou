@@ -22,14 +22,15 @@
 }
 
 .header #head_u1>li {
-    width: 38px;
-    margin: 0 12px;
+    width: 60px;
+    /* margin: 0 12px; */
     height: 34px;
-    /* text-align: center; */
+    text-align: center;
     font-size: 17px;
-    color: #b8b8b8;
+    color: #757575;
     position: relative;
     left: 40px;
+    border-radius: 0.25rem;
 }
 
 .header ul li:hover {
@@ -72,6 +73,7 @@ button[id="searchBtn"] {
 
 .header ul li a {
     margin: auto 0;
+    color: #757575;
     text-decoration: none;
 }
 
@@ -94,7 +96,7 @@ button[id="searchBtn"] {
 
 .header a[id="seg"] {
     position: relative;
-    left: 110px;
+    left: 10%;
     font-size: 20px;
     top: 3px;
 }
@@ -125,6 +127,7 @@ a[id="reg"] {
     text-align: center;
     color: #fff;
     font-size: 14px;
+    text-decoration: none;
 }
 
 div[id="know-content"] {
@@ -140,7 +143,7 @@ button[id="closeKnow"] {
 
 .header #header_list {
     width: 400px;
-    height: 250px;
+    height: 270px;
     background-color: #fff;
     display: none;
     position: relative;
@@ -201,6 +204,13 @@ button[id="closeKnow"] {
     box-sizing: border-box;
 }
 
+#header_list_left ul li {
+    text-align: left;
+    margin-bottom: 3%;
+    margin-left: 7%;
+    color: #757575;
+}
+
 #header_list_right {
     width: 60%;
     height: 100%;
@@ -210,4 +220,23 @@ button[id="closeKnow"] {
 .san {
     border: 2px solid transparent;
     border-top: 2px solid #e8e8e8;
+}
+
+
+/* #class_img {
+    width: 150px;
+    position: absolute;
+    top: 36px;
+    left: 201px;
+    display: block;
+} */
+
+.header a[id="seg"]:hover:after {
+    content: '';
+    display: block;
+    width: 146px;
+    height: 100%;
+    background-image: url(../img/header/sf.gg-tip@2x.png);
+    background-repeat: no-repeat;
+    background-size: 146px;
 }
