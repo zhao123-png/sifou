@@ -14,18 +14,18 @@
     border-bottom: 2px solid #f0f0f0;
 }
 
-.header ul {
+.header>ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
 }
 
-.header ul li {
+.header #head_u1>li {
     width: 38px;
     margin: 0 12px;
     height: 34px;
-    text-align: center;
+    /* text-align: center; */
     font-size: 17px;
     color: #b8b8b8;
     position: relative;
@@ -136,4 +136,53 @@ div[id="know-content"] {
 button[id="closeKnow"] {
     position: absolute;
     right: 3px;
+}
+
+
+.header #header_list{
+	width:400px;
+	height:250px;
+	background-color:#fff;
+	display:block;
+	position:relative;
+	z-index:1000;
+	border:1px solid #e8e8e8;
+	border-radius:0.25rem;
+	
+}
+.header #header_list ul li{
+	text-align:left;
+	/* margin:none; */
+	margin-left:-22%;
+}
+
+#header_list ul{
+	width:30%;
+	height:100%;
+	border:1px solid #e8e8e8;
+	border-top:none;
+	border-bottom:none;
+	margin-top:-1%;
+}
+#header_list ul:before{
+	content:"";
+	display:table;
+}
+
+.header .drop_list:hover #header_list{
+	display:block;
+}
+
+#header_list_list{
+	display:inline-block;
+	width:67%;
+	margin-top:3%;
+	
+}
+
+
+ #header_list{
+	width:40%;
+	height:100%;
+	display:inline-block;
 }
