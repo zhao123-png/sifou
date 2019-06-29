@@ -39,6 +39,11 @@ p[id="know_des"] {
 div[id="left-top"] {
     ul {
         li {
+            &:first-child {
+                a {
+                    color: #fff;
+                }
+            }
             margin-bottom: 5px;
             i {
                 color: #757575;

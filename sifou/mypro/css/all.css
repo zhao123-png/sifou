@@ -25,6 +25,8 @@ p[id="know_des"] {
 
 div[id="left-top"] ul li {
   margin-bottom: 5px; }
+  div[id="left-top"] ul li:first-child a {
+    color: #fff; }
   div[id="left-top"] ul li i {
     color: #757575; }
   div[id="left-top"] ul li a {
@@ -110,6 +112,7 @@ div[id="callWrite"] {
 #left-top ul li {
   border-radius: 0.25rem; }
   #left-top ul li:first-child {
+    color: #fff;
     background-color: #009a61; }
   #left-top ul li:not(:first-child):hover {
     background-color: rgba(117, 117, 117, 0.1); }

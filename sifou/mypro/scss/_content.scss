@@ -81,6 +81,7 @@ div[id="callWrite"] {
         li {
             border-radius: 0.25rem;
             &:first-child {
+                color: #fff;
                 background-color: $green_color;
             }
             &:not(:first-child):hover {
