@@ -106,3 +106,10 @@ div[id="callWrite"] {
   div[id="callWrite"] a {
     font-size: 12px;
     color: #8a6d3b; }
+
+#left-top ul li {
+  border-radius: 0.25rem; }
+  #left-top ul li:first-child {
+    background-color: #009a61; }
+  #left-top ul li:not(:first-child):hover {
+    background-color: rgba(117, 117, 117, 0.1); }

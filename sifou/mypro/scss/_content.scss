@@ -76,3 +76,16 @@ div[id="callWrite"] {
     }
 }
 
+#left-top {
+    ul {
+        li {
+            border-radius: 0.25rem;
+            &:first-child {
+                background-color: $green_color;
+            }
+            &:not(:first-child):hover {
+                background-color: rgba(117, 117, 117, 0.1);
+            }
+        }
+    }
+}
