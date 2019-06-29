@@ -138,51 +138,76 @@ button[id="closeKnow"] {
     right: 3px;
 }
 
-
-.header #header_list{
-	width:400px;
-	height:250px;
-	background-color:#fff;
-	display:block;
-	position:relative;
-	z-index:1000;
-	border:1px solid #e8e8e8;
-	border-radius:0.25rem;
-	
-}
-.header #header_list ul li{
-	text-align:left;
-	/* margin:none; */
-	margin-left:-22%;
-}
-
-#header_list ul{
-	width:30%;
-	height:100%;
-	border:1px solid #e8e8e8;
-	border-top:none;
-	border-bottom:none;
-	margin-top:-1%;
-}
-#header_list ul:before{
-	content:"";
-	display:table;
-}
-
-.header .drop_list:hover #header_list{
-	display:block;
-}
-
-#header_list_list{
-	display:inline-block;
-	width:67%;
-	margin-top:3%;
-	
+.header #header_list {
+    width: 400px;
+    height: 250px;
+    background-color: #fff;
+    display: none;
+    position: relative;
+    z-index: 1000;
+    border: 1px solid #e8e8e8;
+    border-radius: 0.25rem;
 }
 
 
- #header_list{
-	width:40%;
-	height:100%;
-	display:inline-block;
+/* .header #header_list ul li {
+    text-align: left;
+    margin:none; 
+    margin-left: -22%;
+} */
+
+
+/* #header_list ul {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #e8e8e8;
+    border-top: none;
+    border-bottom: none;
+} */
+
+#header_list ul:before {
+    content: "";
+    display: table;
+}
+
+.header .drop_list:hover #header_list {
+    display: block;
+}
+
+#header_list_list {
+    display: inline-block;
+    width: 67%;
+    margin-top: 3%;
+}
+
+#header_list {
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+}
+
+
+/* #header_list ul {
+    display: inline-block;
+} */
+
+#header_list_left {
+    width: 40%;
+    height: 100%;
+    border: 1px solid #e8e8e8;
+    border-top: none;
+    border-bottom: none;
+    float: left;
+    box-sizing: border-box;
+}
+
+#header_list_right {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.san {
+    border: 2px solid transparent;
+    border-top: 2px solid #e8e8e8;
 }
