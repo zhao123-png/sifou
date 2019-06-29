@@ -20,11 +20,20 @@
 
 ul {
     list-style: none;
+    width: 85%;
     border-bottom: 1px solid #000;
+    position: relative;
+    right: -84px;
 }
 
 ul li {
     width: 50px;
-    height: 40px;
     border: 1px solid #000;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    right: 12.7%;
+}
+
+.parasList input {
+    display: block;
 }
