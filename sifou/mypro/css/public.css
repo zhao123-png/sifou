@@ -1,0 +1,30 @@
+#container {
+    margin: 0 auto;
+    width: 1140px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#public_con {
+    width: 840px;
+    height: 625px;
+    border: 1px solid #000;
+}
+
+#msg_show {
+    width: 270px;
+    height: 290px;
+    border: 1px solid #000;
+}
+
+ul {
+    list-style: none;
+    border-bottom: 1px solid #000;
+}
+
+ul li {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #000;
+}
