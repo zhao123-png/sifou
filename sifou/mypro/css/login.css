@@ -7,7 +7,7 @@
     background-color: #fff;
 }
 
-#login_container #box_wecat img {
+#login_container .box_wecat img {
     width: 160px;
     height: 160px;
 }
@@ -18,7 +18,7 @@
     margin: 30px;
 }
 
-#box_wecat {
+.box_wecat {
     width: 170px;
     height: 160px;
     border: 1px solid #e8e8e8;
@@ -70,4 +70,25 @@
 li:nth-child(2),
 li:nth-child(3) {
     border-right: 1px solid #e8e8e8;
+}
+
+#loginAndReg {
+    display: flex;
+    justify-content: center;
+}
+
+#loginAndReg li {
+    width: 116px;
+    height: 23px;
+}
+
+.loginAndReg_tab input {
+    display: block;
+    margin: 0 auto;
+}
+
+.pwd_forGet {
+    display: block;
+    text-align: right;
+    margin-right: 20%;
 }

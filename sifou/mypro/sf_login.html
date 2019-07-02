@@ -8,21 +8,51 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/normalize_zh.css">
+    <script src="js/login.js"></script>
 </head>
 
 <body>
     <!-- 手机号<input type="text" placeholder="请输入手机号" id="sphone"><br> 密码 <input type="password" placeholder="请输入密码" id="spwd"><br>
     <button onclick="login()">登录</button> -->
     <div id="login_container">
-        <p id="login_title">注册登录SegmentFault</p>
-        <div id="box_wecat">
-            <img src="./img/login/erweima.jpg" alt="">
+        <div class="tab_2">
+            <p id="login_title">注册登录SegmentFault</p>
+            <div class="box_wecat">
+                <img src="./img/login/erweima.jpg" alt="">
+            </div>
+            <span><i style="color:#86ca5e;" class="fa fa-weixin"></i> 微信扫码</span>
         </div>
-        <span><i class="fa fa-weixin"></i> 微信扫码</span>
+        <div class="tab_1" style="display:none">
+            <p>SegmentFault APP 扫码登录</p>
+            <div class="box_wecat">
+                <img src="./img/login/erweima.jpg" alt="">
+            </div>
+            <span>打开<a href="#">SegmentFault APP</a></span>
+            <p>在「我的」页面右上角打开扫一扫</p>
+        </div>
+        <div class="tab_1" style="display:none">
+            <ul id="loginAndReg">
+                <li>
+                    <a href="#">账号登录</a>
+                </li>
+                <li>
+                    <a href="#">免密登录</a>
+                </li>
+            </ul>
+            <div class="loginAndReg_tab">
+                <input type="text" placeholder="手机号/邮箱/用户名">
+                <input type="password" placeholder="密码">
+                <a class="pwd_forGet" href="#">忘记密码</a>
+                <button>登录</button>
+            </div>
+            <div class="loginAndReg_tab">
+
+            </div>
+        </div>
         <ul id="login_list">
-            <li><a href="#">APP扫码登录</a></li>
-            <li><a href="#">账号登录</a></li>
-            <li><a href="#">免密登录</a></li>
+            <li><a class="tab_link" href="#">APP扫码登录</a></li>
+            <li><a class="tab_link" href="#">账号登录</a></li>
+            <li><a class="tab_link" href="#">免密登录</a></li>
             <li><a class="logo" href="#"><i class="fa fa-qq"></i> </a></li>
             <li><a class="logo" href="#"><i class="fa fa-weibo"></i></a></li>
             <li><a class="logo" href="#"><i class="fa fa-twitter"></i></a></li>
