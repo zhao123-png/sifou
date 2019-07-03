@@ -24,12 +24,47 @@ window.onload = function() {
             getUl.replaceChild(addTab_link, getUl.getElementsByTagName("li")[0]);
             var getLi = getUl.getElementsByTagName("li")[0];
             getLi.childNodes[0].setAttribute("href", "#");
-            //循环所有div设置隐藏
+            //设置点击事件
+            getLi.onclick = function() {
+                    tab_2[0].style.display = "block";
+                    divs[0].style.display = "none";
+                    var AppLogin_li = document.createElement("li");
+                    var AppLogin_a = document.createElement("a");
+                    var AppLogin_text = document.createTextNode("App扫码登录");
+                    AppLogin_a.appendChild(AppLogin_text);
+                    AppLogin_a.className = "tab_link";
+                    AppLogin_li.appendChild(AppLogin_a);
+                    //console.log(AppLogin_li);
+                    AppLogin_a.setAttribute("href", "#");
+                    //console.log(getLi);
+                    getUl.replaceChild(AppLogin_li, getLi);
+                    var getLi2 = document.getElementsByTagName("li")[0];
+                    // getLi.onclick = null;
+                    // //console.log(getLi2);
+                    // getLi2.onclick = function() {
+                    //     alert(111);
+                    // }
+                    showAppLogin();
+
+                }
+                //循环所有div设置隐藏
             for (var j = 0; j < divs.length; j++) {
                 divs[j].style.display = "none";
             }
             //获取点击的 a  设置对应得div显示  this执行 tab_link[i]
             divs[this.index].style.display = "block";
         }
+    }
+}
+
+
+function showAppLogin() {
+    var getUl = document.getElementById("login_list");
+    var getLi = getUl.getElementsByTagName("li")[0];
+    var tab_2 = document.getElementsByClassName("tab_2");
+    var divs = document.getElementsByClassName("tab_1");
+    getLi.onclick = function() {
+        tab_2[0].style.display = "none";
+        divs[0].style.display = "block";
     }
 }
