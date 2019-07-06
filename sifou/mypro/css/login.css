@@ -1,12 +1,17 @@
+/* 设置容器 */
+
 #login_container {
     width: 450px;
     height: 444px;
-    border: 1px solid #000;
+    border: 1px solid #e8e8e8;
     margin: 80px 0 0 55%;
     text-align: center;
     background-color: #fff;
     position: relative;
 }
+
+
+/* 设置微信图片 */
 
 #login_container .box_wecat img {
     width: 160px;
@@ -77,33 +82,184 @@
 }
 
 #login_list li:nth-child(1),
-li:nth-child(2),
-li:nth-child(3) {
+#login_list li:nth-child(2),
+#login_list li:nth-child(3) {
     border-right: 1px solid #e8e8e8;
 }
 
 #loginAndReg {
+    margin-top: 16%;
+    margin-right: 8%;
     display: flex;
     justify-content: center;
 }
 
 #loginAndReg li {
-    width: 116px;
+    width: 130px;
     height: 23px;
+    border-bottom: 1px solid #e8e8e8;
 }
 
-.loginAndReg_tab input {
+
+/* 文本框样式 */
+
+.input_pp {
     display: block;
     margin: 0 auto;
+    width: 258px;
+    height: 26px;
+    border-radius: 0.25rem;
+    /* outline: none; */
+    border: 1px solid #e8e8e8;
+    margin-bottom: 3%;
+    font-size: 13px;
+    padding-left: 10px;
+    box-sizing: border-box;
 }
+
+.input_pp::placeholder {
+    color: #ccc;
+}
+
+
+/* 忘记密码样式 */
 
 .pwd_forGet {
     display: block;
     text-align: right;
-    margin-right: 20%;
+    margin-right: 21%;
+    text-decoration: none;
+    color: #3d3d3d;
+    font-size: 14px;
+    margin-bottom: 15%;
 }
 
 #App_login_a {
     text-decoration: none;
     color: rgb(48, 108, 255);
+}
+
+#last_tabLink {
+    margin-top: 16%;
+    margin-right: 8%;
+    display: flex;
+    justify-content: center;
+}
+
+#last_tabLink li {
+    width: 130px;
+    height: 23px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+/* 设置所有tab导航 */
+
+a {
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+
+/* 登录按钮样式 */
+
+.login_btn {
+    width: 254px;
+    height: 34px;
+    border: none;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+form {
+    position: relative;
+}
+
+
+/* eye按钮位置 */
+
+.search_pwd {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 5%;
+    right: 21%;
+}
+
+.login_btn[disable] {
+    color: #ccc;
+    background-color: #f5f5f5;
+}
+
+.phone_area {
+    border-radius: 0.25rem;
+    width: 76px;
+    height: 32px;
+    /* position: absolute; */
+}
+
+.phone_pos {
+    width: 56%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone_input {
+    display: inline-block;
+    width: 156px;
+    height: 32px;
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+
+/* 短信模块 */
+
+.msg_container {
+    position: relative;
+    margin: 0 auto;
+    width: 254px;
+    margin-bottom: 50px;
+}
+
+.yzm_btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    position: absolute;
+    right: -2%;
+    bottom: 3%;
+    line-height: 32px;
+    color: rgb(48, 108, 255);
+    font-size: 14px;
+}
+
+.yzm_int {
+    width: 100%;
+    height: 32px;
+    border-radius: 0.25rem;
+    border: 1px solid #e8e8e8;
+}
+
+
+/* 下方下载按钮 */
+
+#down_container {
+    width: 450px;
+    position: absolute;
+    right: 17%;
+    margin-top: 1%;
+}
+
+.down_App {
+    display: inline-block;
+    width: 101%;
+    color: #fff;
+    background-color: rgb(216, 30, 6);
+    font-size: 14px;
+    border-radius: 0.25rem;
+    text-align: center;
+    line-height: 32px;
 }

@@ -1,4 +1,53 @@
 window.onload = function() {
+    //监听文本框
+    //获取按钮 设置禁用属性
+    var login_btn = document.getElementsByClassName("login_btn");
+    //console.log(login_btn);
+    for (let i = 0; i < login_btn.length; i++) {
+        login_btn[i].setAttribute("disable", "disable");
+    }
+    //获取文本框
+    // var input_pp = document.getElementsByClassName("input_pp");
+    // for (let i = 0; i < input_pp.length; i++) {
+    //     if ("oninput" in input_pp[i]) {
+    //         //alert(111);
+    //         input_pp[i].addEventListener("input", getKeyWord.bind(input_pp[i]));
+    //     } else {
+
+    //         input_pp[i].onpropertychange = getKeyWord;
+    //     }
+    // }
+    var user_value = document.getElementById("user_value");
+    var pwd_value = document.getElementById("pwd_value");
+    if ("oninput" in user_value) {
+        user_value.addEventListener("input", getKeyWord);
+    } else {
+        getKeyWord.onproperpychange = getKeyWord;
+    }
+
+    if ("oninput" in pwd_value) {
+        pwd_value.addEventListener("input", getKeyWord);
+    } else {
+        pwd_value.onpropertychange = getKeyWord;
+    }
+
+    function getKeyWord() {
+        let $user_value = user_value.value.length;
+        let $pwd_value = pwd_value.value.length;
+        if ($user_value && $pwd_value >= 1) {
+            login_btn[0].removeAttribute("disable");
+            login_btn[0].style = "background-color:#b60b14;color:#fff;";
+        } else if ($user_value && $pwd_value < 1) {
+            login_btn[0].setAttribute("disable", "disable");
+            login_btn[0].style = "background-color:#f5f5f5;";
+        }
+        // if (this.value != null) {
+        //     alert(11);
+        // }
+    }
+    // tab切换
+    // var tab_child1 = document.getElementById("tab_child");
+    // console.log(tab_child1);
     //子div 切换
     var loginAndReg_tab = document.getElementsByClassName("loginAndReg_tab");
     var loginAndReg_link = document.getElementsByClassName("loginAndReg_link");
@@ -37,6 +86,7 @@ window.onload = function() {
             getUl.replaceChild(addTab_link, getUl.getElementsByTagName("li")[0]);
             var getLi = getUl.getElementsByTagName("li")[0];
             getLi.childNodes[0].setAttribute("href", "#");
+            last_tab_login();
             //设置点击事件
             getLi.onclick = function() {
                     tab_2[0].style.display = "block";
@@ -116,6 +166,7 @@ function tab_list() {
                     tab_2[0].style.display = "block";
                     divs[0].style.display = "none";
                     divs[1].style.display = "none";
+                    divs[2].style.display = "none";
                     var AppLogin_li = document.createElement("li");
                     var AppLogin_a = document.createElement("a");
                     var AppLogin_text = document.createTextNode("App扫码登录");
@@ -141,6 +192,20 @@ function tab_list() {
             }
             //获取点击的 a  设置对应得div显示  this执行 tab_link[i]
             divs[this.index].style.display = "block";
+        }
+    }
+}
+
+function last_tab_login() {
+    let last_tab_link = document.getElementsByClassName("last_tab_link");
+    let last_divs = document.getElementsByClassName("last_divs");
+    for (let i = 0; i < last_tab_link.length; i++) {
+        last_tab_link[i].index = i;
+        last_tab_link[i].onclick = function() {
+            for (let j = 0; j < last_divs.length; j++) {
+                last_divs[j].style.display = "none";
+            }
+            last_divs[this.index].style.display = "block";
         }
     }
 }
