@@ -32,21 +32,21 @@
         </div>
         <div id="tab_child" class="tab_1" style="display:none">
             <ul id="loginAndReg">
-                <li>
+                <li class="bottom_li_tap active">
                     <a class="loginAndReg_link" href="#">账号登录</a>
                 </li>
-                <li>
+                <li class="bottom_li_tap">
                     <a class="loginAndReg_link" href="#">免密登录</a>
                 </li>
             </ul>
             <div class="loginAndReg_tab">
                 <form action="">
-                    <input id="user_value" class="input_pp" type="text" placeholder="手机号/邮箱/用户名">
-                    <input id="pwd_value" class="input_pp" type="password" placeholder="密码">
+                    <input id="sphone" class="input_pp" type="text" placeholder="手机号/邮箱/用户名">
+                    <input id="spwd" class="input_pp" type="password" placeholder="密码">
                     <button class="search_pwd"> <i class="fa fa-eye"></i></button>
                 </form>
                 <a class="pwd_forGet" href="#">忘记密码</a>
-                <button class="login_btn">登录</button>
+                <button class="login_btn" onclick="login()">登录</button>
             </div>
             <div class="loginAndReg_tab " style="display:none">
                 <div class="phone_pos">
@@ -69,8 +69,8 @@
         </div>
         <div class="tab_1" style="display:none;">
             <ul id="last_tabLink">
-                <li><a class="last_tab_link" href="#">账号登录</a></li>
-                <li><a class="last_tab_link" href="#">免密登录</a></li>
+                <li class="last_tab_li"><a class="last_tab_link" href="#">账号登录</a></li>
+                <li class="last_tab_li active"><a class="last_tab_link" href="#">免密登录</a></li>
             </ul>
             <div>
                 <div class="last_divs" style="display:none">

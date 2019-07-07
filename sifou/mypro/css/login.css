@@ -97,7 +97,7 @@
 #loginAndReg li {
     width: 130px;
     height: 23px;
-    border-bottom: 1px solid #e8e8e8;
+    /* border-bottom: 1px solid #e8e8e8; */
 }
 
 
@@ -149,7 +149,7 @@
 #last_tabLink li {
     width: 130px;
     height: 23px;
-    border-bottom: 1px solid #e8e8e8;
+    /* border-bottom: 1px solid #e8e8e8; */
 }
 
 
@@ -262,4 +262,8 @@ form {
     border-radius: 0.25rem;
     text-align: center;
     line-height: 32px;
+}
+
+.active {
+    border-bottom: 2px solid #ca0c16;
 }

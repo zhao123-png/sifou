@@ -16,9 +16,9 @@ window.onload = function() {
 
     //         input_pp[i].onpropertychange = getKeyWord;
     //     }
-    // }
-    var user_value = document.getElementById("user_value");
-    var pwd_value = document.getElementById("pwd_value");
+    // } 
+    var user_value = document.getElementById("sphone");
+    var pwd_value = document.getElementById("spwd");
     if ("oninput" in user_value) {
         user_value.addEventListener("input", getKeyWord);
     } else {
@@ -51,17 +51,22 @@ window.onload = function() {
     //子div 切换
     var loginAndReg_tab = document.getElementsByClassName("loginAndReg_tab");
     var loginAndReg_link = document.getElementsByClassName("loginAndReg_link");
+    //获取li
+    var bottom_li_tap = document.getElementsByClassName("bottom_li_tap");
     for (var i = 0; i < loginAndReg_link.length; i++) {
         loginAndReg_link[i].index = i;
         loginAndReg_link[i].onclick = function() {
             for (var j = 0; j < loginAndReg_tab.length; j++) {
                 loginAndReg_tab[j].style.display = "none";
+                bottom_li_tap[j].classList.remove("active");
             }
             loginAndReg_tab[this.index].style.display = "block";
+            bottom_li_tap[this.index].classList.add("active");
         }
     }
     //获取元素 循环用
     var divs = document.getElementsByClassName("tab_1");
+    var last_divs = document.getElementsByClassName("last_divs");
     //console.log(divs);
     var tab_link = document.getElementsByClassName("tab_link");
     //获取a的下标
@@ -73,6 +78,7 @@ window.onload = function() {
             //微信登录界面隐藏
             var tab_2 = document.getElementsByClassName("tab_2");
             tab_2[0].style.display = "none";
+
             //创建li元素
             var addTab_link = document.createElement("li");
             //创建a元素
@@ -92,6 +98,7 @@ window.onload = function() {
                     tab_2[0].style.display = "block";
                     divs[0].style.display = "none";
                     divs[1].style.display = "none";
+                    divs[2].style.display = "none";
                     var AppLogin_li = document.createElement("li");
                     var AppLogin_a = document.createElement("a");
                     var AppLogin_text = document.createTextNode("App扫码登录");
@@ -114,6 +121,7 @@ window.onload = function() {
                 //循环所有div设置隐藏
             for (var j = 0; j < divs.length; j++) {
                 divs[j].style.display = "none";
+                // last_divs[j].style.display = "none";
             }
             //获取点击的 a  设置对应得div显示  this执行 tab_link[i]
             divs[this.index].style.display = "block";
@@ -199,13 +207,17 @@ function tab_list() {
 function last_tab_login() {
     let last_tab_link = document.getElementsByClassName("last_tab_link");
     let last_divs = document.getElementsByClassName("last_divs");
+    let last_tab_li = document.getElementsByClassName("last_tab_li");
+    //获取最后一个切换
     for (let i = 0; i < last_tab_link.length; i++) {
         last_tab_link[i].index = i;
         last_tab_link[i].onclick = function() {
             for (let j = 0; j < last_divs.length; j++) {
                 last_divs[j].style.display = "none";
+                last_tab_li[j].classList.remove("active");
             }
             last_divs[this.index].style.display = "block";
+            last_tab_li[this.index].classList.add("active");
         }
     }
 }
