@@ -1,0 +1,40 @@
+#footer_container {
+    width: 100%;
+    height: 422px;
+    border: 1px solid #000;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    #footer_list {
+        width: 72.66666%;
+        height: 241px;
+        display: flex;
+        justify-content: space-between;
+        dl {
+            dt {
+                text-align: center;
+            }
+        }
+    }
+    #copyright {
+        width: 72.66666%;
+        height: 90px;
+        text-align: center;
+        p {
+            &:first-child {
+                margin: 0;
+            }
+            &:nth-child(2) {
+                margin: 0;
+            }
+            &:last-child {
+                margin-top: 3%;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
