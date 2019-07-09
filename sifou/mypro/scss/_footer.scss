@@ -1,7 +1,7 @@
 #footer_container {
     width: 100%;
     height: 422px;
-    border: 1px solid #000;
+    border-top: 1px solid #e8e8e8;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -12,8 +12,18 @@
         display: flex;
         justify-content: space-between;
         dl {
+            box-sizing: border-box;
             dt {
                 text-align: center;
+                margin-bottom: 16px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            dd {
+                a {
+                    color: #888;
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -31,10 +41,66 @@
             &:last-child {
                 margin-top: 3%;
             }
+            a,
+            span {
+                color: #888;
+                font-size: 14px;
+            }
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
 
 a {
     text-decoration: none;
+}
+
+#logo_link {
+    position: relative;
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        right: -50%;
+        li {
+            margin-left: 5px;
+            &:first-child {
+                a {
+                    i {
+                        color: green;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    i {
+                        color: red;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    i {
+                        color: black;
+                    }
+                }
+            }
+            &:last-child {
+                a {
+                    i {
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer_down {
+    width: 50px;
 }

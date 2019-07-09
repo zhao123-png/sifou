@@ -90,3 +90,35 @@ div[id="callWrite"] {
         }
     }
 }
+
+div[class="size_color"] {
+    font-size: 12px;
+    color: #017E66;
+    width: 35px;
+    height: 14px;
+    text-align: center;
+    border-top-left-radius: 0.15rem;
+    border-top-right-radius: 0.15rem;
+    line-height: 14px;
+    background-color: #C8E9DE;
+}
+
+div[class="size_color2"] {
+    font-size: 15px;
+    text-align: center;
+    background-color: #EBF7F3;
+    border-bottom-left-radius: 0.15rem;
+    border-bottom-right-radius: 0.15rem;
+}
+
+#mse_list {
+    ul {
+        li {
+            div {
+                div[class="col-2"] {
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+}
