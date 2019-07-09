@@ -62,6 +62,9 @@ div[id="left-top"] {
     ul {
         li {
             margin-bottom: 5px;
+            &:hover{
+                background-color: rgba(117, 117, 117, 0.1);
+            }
             a {
                 img {
                     @include logio-width();
