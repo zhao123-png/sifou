@@ -68,6 +68,11 @@ a {
         position: absolute;
         right: -50%;
         li {
+            &:hover {
+                div {
+                    display: block;
+                }
+            }
             margin-left: 5px;
             &:first-child {
                 a {
@@ -103,4 +108,40 @@ a {
 
 #footer_down {
     width: 50px;
+}
+
+#footer_weImg_container {
+    position: absolute;
+    width: 114px;
+    height: 113px;
+    border: 1px solid #888;
+    text-align: center;
+    top: -123px;
+    right: -47px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    display: none;
+    &:before {
+        content: "";
+        display: table;
+    }
+    #img_we {
+        width: 65px;
+        margin-top: 15px;
+    }
+    span {
+        font-size: 14px;
+        color: #888;
+        display: block;
+    }
+    #minThree {
+        width: 0px;
+        border: 13px solid transparent;
+        border-top: 15px solid #fff;
+        position: absolute;
+        top: 112px;
+        right: 47px;
+        // border: 1px solid #888;
+    }
 }

@@ -44,3 +44,19 @@ button[id="closeKnow"] {
     background: rgba(0, 0, 0, 0);
     border: 0;
 }
+
+.detail_title {
+    font-size: 14px;
+}
+
+.detail_title span {
+    font-size: 12px;
+}
+
+.detail_title span {
+    color: #999;
+}
+
+.detail_title span:last-child {
+    color: #F5A623;
+}
