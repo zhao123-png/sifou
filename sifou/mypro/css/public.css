@@ -1,3 +1,7 @@
+p {
+    margin: 0px;
+}
+
 #container {
     margin: 0 auto;
     width: 1140px;
@@ -9,7 +13,7 @@
 #public_con {
     width: 840px;
     height: 625px;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
 }
 
 #msg_show {
@@ -21,19 +25,109 @@
 ul {
     list-style: none;
     width: 85%;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ccc;
     position: relative;
     right: -84px;
 }
 
 ul li {
-    width: 50px;
-    border: 1px solid #000;
+    width: 62px;
+    height: 29px;
+    color: #555;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
     border-bottom: 1px solid transparent;
     position: relative;
-    right: 12.7%;
+    text-align: center;
+    line-height: 29px;
+    right: 14.4%;
 }
 
 .parasList input {
     display: block;
+    width: 95%;
+    height: 25px;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.parasList {
+    margin-top: 1%;
+    margin-left: 3.5%;
+}
+
+#show_msg {
+    border: 1px solid #bce8f1;
+    border-radius: 0.25rem;
+    margin: 0 auto;
+    width: 751px;
+    height: 40px;
+    background-color: #d9edf7;
+    padding: 15px;
+    color: #31708f;
+    font-size: 14px;
+}
+
+#show_msg>a {
+    text-decoration: none;
+    color: #009a61;
+}
+
+label,
+p {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#show_msg>a:hover {
+    text-decoration: underline;
+}
+
+.btn_container {
+    margin-bottom: 1%;
+}
+
+.btn_container button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.btn_container button+button {
+    margin-left: 10px;
+}
+
+#tex_are {
+    display: block;
+    width: 95%;
+    height: 80px;
+    padding: 5px;
+    border-radius: 0.25rem;
+}
+
+::placeholder {
+    color: #ccc;
+}
+
+#btn_sub {
+    text-align: right;
+    margin-top: 3%;
+    margin-right: 3%;
+}
+
+#btn_sub button {
+    width: 50px;
+    height: 30px;
+    background-color: #009a61;
+    border-radius: 0.25rem;
+    border: none;
+    color: #fff;
+}
+
+#btn_sub button:hover {
+    background-color: #006741;
+    border-color: #00432a;
 }

@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="./js/sf.js"></script>
     <link rel="stylesheet" href="css/public.css">
+    <!-- <link rel="stylesheet" href="css/normalize_zh.css"> -->
 </head>
 
 <body>
@@ -23,20 +24,43 @@
             <ul>
                 <li>发链接</li>
             </ul>
-            <div>
+            <div id="show_msg">
                 有价值的内容 + 概括性的标题 = 一篇受欢迎的头条
                 <br> 声望 &lt; 1000的用户发布需要审核，一般这个过程不会超过24小时；也可以
-                <a href="#">申请发送头条,</a>自由分享内容
+                <a href="javascript:;">申请发送头条,</a>自由分享内容
             </div>
             <div class="parasList">
-                <label for="internet">网址</label>
+                <label for="internet">网址<span>*</span></label>
                 <input type="text" id="internet" placeholder="请输入网址">
-                <label for="title">链接标题</label>
+                <label for="title">链接标题<span>*</span></label>
                 <input type="text" id="title" placeholder="请输入标题">
+                <p>频道<span>*</span></p>
+                <input type="text" placeholder="选择频道">
+                <div class="btn_container">
+                    <button>前端</button>
+                    <button>后端</button>
+                    <button>小程序</button>
+                    <button>人工智能</button>
+                    <button>区块链</button>
+                    <button>安全</button>
+                    <button>Android</button>
+                    <button>IOS</button>
+                    <button>工具</button>
+                    <button>程序员</button>
+                    <button>行业</button>
+                </div>
+                <p>标签（选填）：最多5个</p>
+                <input type="text" placeholder="标签，如：php可使用逗号，分号分割">
+                <label for="tex_are">推荐语或内容描述<span>*</span></label>
+                <textarea id="tex_are" placeholder="分享两点、槽点、你的观点或内容描述"></textarea>
             </div>
+            <div id="btn_sub">
+                <button>提交</button>
+            </div>
+        </div>
+        <div id="msg_show">
 
         </div>
-        <div id="msg_show"></div>
     </div>
 </body>
 
