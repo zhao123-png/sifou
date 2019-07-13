@@ -19,10 +19,11 @@ p {
 #msg_show {
     width: 270px;
     height: 290px;
-    border: 1px solid #000;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
-ul {
+#public_con .alone_pub {
     list-style: none;
     width: 85%;
     border-bottom: 1px solid #ccc;
@@ -30,7 +31,7 @@ ul {
     right: -84px;
 }
 
-ul li {
+#public_con .alone_pub li {
     width: 62px;
     height: 29px;
     color: #555;
@@ -57,6 +58,7 @@ ul li {
 .parasList {
     margin-top: 1%;
     margin-left: 3.5%;
+    position: relative;
 }
 
 #show_msg {
@@ -130,4 +132,165 @@ p {
 #btn_sub button:hover {
     background-color: #006741;
     border-color: #00432a;
+}
+
+.new_btn_type {
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    height: 31px;
+    background-color: #e7f2ed;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.property_container {
+    width: 520px;
+    height: 170px;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    position: absolute;
+    left: 0%;
+    bottom: -56px;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.property_container ul {
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    justify-content: start; */
+    list-style: none;
+    margin-top: 10px;
+    position: relative;
+}
+
+.property_container ul li {
+    box-sizing: border-box;
+    margin-left: 12px;
+    float: left;
+    text-align: center;
+}
+
+.property_container ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #666;
+    padding: 0px 3px;
+}
+
+
+/* div[class="btn_prop_container"] {
+    position: absolute;
+    top: 103%;
+} */
+
+.property_container button {
+    display: block;
+    float: left;
+    height: 22px;
+    margin: 5px;
+    border-radius: 11px;
+    border: none;
+    background-color: rgba(1, 126, 102, 0.08);
+    color: #017e66;
+}
+
+.property_container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.property_container li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.property_container li:hover {
+    background-color: #eee;
+    border-radius: 0.25rem;
+}
+
+.property_container ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.sapn_Pro {
+    display: inline-block;
+    height: 15px;
+    background-color: #e7f2ed;
+    color: #017e66;
+    line-height: 15px;
+    font-size: 13px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.msg_show_p {
+    font-weight: lighter;
+    font-size: 16px;
+    font-family: "黑体";
+}
+
+.msg_show_ul li {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.msg_show_ul li a {
+    color: #009a61;
+    text-decoration: none;
+}
+
+.msg_show_ul li a:hover {
+    color: #004e31;
+    text-decoration: underline;
+}
+
+#msg_show2 {
+    width: 270px;
+    height: 110px;
+    border-bottom: 1px solid #eee;
+}
+
+.msg_show2_p1 {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.msg_show2_p2 {
+    margin-top: 7px;
+}
+
+.msg_show2_p2 a {
+    border: 1px dashed #ccc;
+    font-size: 14px;
+    color: #009a61;
+    text-decoration: none;
+    cursor: -webkit-grabbing;
+}
+
+.public_last {
+    margin-top: 15px;
+}
+
+.public_last img {
+    vertical-align: middle;
+}
+
+.public_last span {
+    color: #ccc;
+    font-weight: lighter;
+}
+
+.active_prop a {
+    color: #fff !important;
+    background-color: #009a61;
+    border-radius: 0.25rem;
 }

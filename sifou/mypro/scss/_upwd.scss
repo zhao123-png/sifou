@@ -1,0 +1,34 @@
+.set_container {
+    width: 75%;
+    border: 1px solid #000;
+    height: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.set_tap {
+    width: 18%;
+    height: 300px;
+    // border: 1px solid #000;
+}
+
+.set_tap .set_top {
+    width: 100%;
+    height: 340px;
+    border: 1px solid #ff0;
+    margin-bottom: 5%;
+}
+
+.set_tap .set_bottom {
+    width: 100%;
+    height: 75px;
+    border: 1px solid #ff0;
+    margin-bottom: 5%;
+}
+
+.content_left {
+    width: 79%;
+    height: 300px;
+    border: 1px solid #000;
+}
