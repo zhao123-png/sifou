@@ -60,3 +60,47 @@ button[id="closeKnow"] {
 .detail_title span:last-child {
     color: #F5A623;
 }
+
+div[id="adv_show"] {
+    height: 200px;
+    width: 269px !important;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    flex: 0 0 90%;
+    margin-left: 5%;
+    /* position: fixed;
+    top: 75%;
+    right: 15%; */
+}
+
+div[id="adv_child1"] {
+    padding: 0px;
+    height: 65%;
+    background-color: #fff;
+    text-align: right;
+}
+
+div[id="adv_child2"] {
+    padding: 0px;
+    height: 35%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div[id="fontContainer"] {
+    text-align: left;
+    margin-left: 10%;
+}
+
+div[id="fontContainer"] p:last-child {
+    margin-top: -15px;
+}
+
+div[id="fontContainer"] p:last-child a {
+    font-size: 14px;
+    line-height: 18px;
+    display: inline-block;
+}

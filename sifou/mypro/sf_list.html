@@ -13,7 +13,7 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/sf.js"></script>
+    <script src="./js/sf.js" defer></script>
 
     <style>
         .carousel-indicators li {
@@ -47,7 +47,7 @@
     </style>
 </head>
 
-<body onload="list()">
+<body onload="list()" style="height:2000px;">
     <!--网页头部 	 -->
     <div class="container-fluid">
         <div class="row">
@@ -293,7 +293,7 @@
                         </div>
                         <!-- 活动推荐 -->
                         <div class="col-12  pl-0">
-                            <div class="row">
+                            <div class="row" style="position:relative;">
                                 <div class="col-6">
                                     <div>
                                         活动推荐
@@ -456,6 +456,27 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div id="adv_show" class="col-12">
+                                    <div id="adv_child1" class="col-12">
+                                        <span>广告</span> <i class="fa fa-times"></i>
+                                        <div id="fontContainer">
+                                            <h4>
+                                                <a href="#">视频通话</a>
+                                            </h4>
+                                            <p>
+                                                <a href="#">www.orga.com</a>
+                                            </p>
+                                            <p>
+                                                <a href="#">
+                                                声网Agora.io，API接口，4行代码接入。每月1万分钟免费。 
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="adv_child2" class="col-12">、
+                                        <button>打开</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -465,7 +486,7 @@
     </div>
     <!-- 锚点 -->
     <div id="trrget_">
-        <a href="#">
+        <a id="goBack" href="#">
             回顶部
         </a>
     </div>

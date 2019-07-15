@@ -289,3 +289,43 @@ function closeKn() {
     var getKnow = document.getElementById("know-content");
     getKnow.style.display = "none";
 }
+
+//回到顶部显示隐藏
+;
+(function() {
+    var getDiv = document.getElementById("trrget_");
+    var a = document.getElementById("goBack");
+    getDiv.style.display = "none";
+
+    a.onclick = function(e) {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+        }
+        //获取window的滚动条事件
+    window.onscroll = function() {
+        var scrollTop = document.documentElement.scrollTop || this.document.body.scrollTop;
+        if (scrollTop > 400) {
+            getDiv.style.display = "block";
+
+        } else {
+            getDiv.style.display = "none";
+        }
+    }
+})();
+
+//广告
+;
+(function() {
+    var getAdvDiv = document.getElementById("adv_show");
+    window.onscroll = function() {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= 1000) {
+            getAdvDiv.style.position = "fixed";
+            getAdvDiv.style.right = "15%";
+            getAdvDiv.style.top = "3%";
+            getAdvDiv.style.width = "269px";
+        } else {
+            getAdvDiv.style.position = "static";
+        }
+    }
+})();
