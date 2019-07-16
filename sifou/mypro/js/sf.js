@@ -329,3 +329,11 @@ function closeKn() {
         }
     }
 })();
+
+;
+(function() {
+    var getClose = document.getElementById("logo_close");
+    getClose.onclick = function() {
+        this.parentNode.parentNode.style.display = "none";
+    }
+})();

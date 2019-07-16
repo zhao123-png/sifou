@@ -104,3 +104,12 @@ div[id="fontContainer"] p:last-child a {
     line-height: 18px;
     display: inline-block;
 }
+
+button[id="open_btn_adv"] {
+    width: 140px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #009a61;
+    color: #fff;
+}

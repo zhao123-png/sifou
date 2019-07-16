@@ -118,4 +118,14 @@
             }
         }
     }
+})();;
+(function() {
+    var getDiv = document.getElementsByClassName("property_container")[0];
+
+    window.onclick = function(e) {
+        //console.log(e);
+        if (e.path.length < 9) {
+            getDiv.style.display = "none";
+        }
+    }
 })();
