@@ -214,6 +214,7 @@ button[id="closeKnow"] {
     margin-bottom: 3%;
     margin-left: 7%;
     color: #757575;
+    cursor: pointer;
 }
 
 #header_list_right {

@@ -14,43 +14,44 @@
 <body>
     <!-- 手机号<input type="text" placeholder="请输入手机号" id="sphone"><br> 密码 <input type="password" placeholder="请输入密码" id="spwd"><br>
     <button onclick="login()">登录</button> -->
-    <div id="login_container">
-        <div class="tab_2">
-            <p id="login_title">注册登录SegmentFault</p>
-            <div class="box_wecat">
-                <img src="./img/login/erweima.jpg" alt="">
+    <div>
+        <div id="login_container">
+            <div class="tab_2">
+                <p id="login_title">注册登录SegmentFault</p>
+                <div class="box_wecat">
+                    <img src="./img/login/erweima.jpg" alt="">
+                </div>
+                <span><i style="color:#86ca5e;" class="fa fa-weixin"></i> 微信扫码</span>
             </div>
-            <span><i style="color:#86ca5e;" class="fa fa-weixin"></i> 微信扫码</span>
-        </div>
-        <div class="tab_1" style="display:none">
-            <p id="login_title2">SegmentFault APP 扫码登录</p>
-            <div class="box_wecat">
-                <img src="./img/login/erweima.jpg" alt="">
+            <div class="tab_1" style="display:none">
+                <p id="login_title2">SegmentFault APP 扫码登录</p>
+                <div class="box_wecat">
+                    <img src="./img/login/erweima.jpg" alt="">
+                </div>
+                <span>打开<a id="App_login_a" href="#">SegmentFault APP</a></span>
+                <p>在「我的」页面右上角打开扫一扫</p>
             </div>
-            <span>打开<a id="App_login_a" href="#">SegmentFault APP</a></span>
-            <p>在「我的」页面右上角打开扫一扫</p>
-        </div>
-        <div id="tab_child" class="tab_1" style="display:none">
-            <ul id="loginAndReg">
-                <li class="bottom_li_tap active">
-                    <a class="loginAndReg_link" href="#">账号登录</a>
-                </li>
-                <li class="bottom_li_tap">
-                    <a class="loginAndReg_link" href="#">免密登录</a>
-                </li>
-            </ul>
-            <div class="loginAndReg_tab">
-                <form action="">
-                    <input id="sphone" class="input_pp" type="text" placeholder="手机号/邮箱/用户名">
-                    <input id="spwd" class="input_pp" type="password" placeholder="密码">
-                    <button class="search_pwd"> <i class="fa fa-eye"></i></button>
-                </form>
-                <a class="pwd_forGet" href="#">忘记密码</a>
-                <button class="login_btn" onclick="login()">登录</button>
-            </div>
-            <div class="loginAndReg_tab " style="display:none">
-                <div class="phone_pos">
-                    <select class="phone_area">
+            <div id="tab_child" class="tab_1" style="display:none">
+                <ul id="loginAndReg">
+                    <li class="bottom_li_tap active">
+                        <a class="loginAndReg_link" href="#">账号登录</a>
+                    </li>
+                    <li class="bottom_li_tap">
+                        <a class="loginAndReg_link" href="#">免密登录</a>
+                    </li>
+                </ul>
+                <div class="loginAndReg_tab">
+                    <form action="">
+                        <input id="sphone" class="input_pp" type="text" placeholder="手机号/邮箱/用户名">
+                        <input id="spwd" class="input_pp" type="password" placeholder="密码">
+                        <button class="search_pwd"> <i class="fa fa-eye"></i></button>
+                    </form>
+                    <a class="pwd_forGet" href="#">忘记密码</a>
+                    <button class="login_btn" onclick="login()">登录</button>
+                </div>
+                <div class="loginAndReg_tab " style="display:none">
+                    <div class="phone_pos">
+                        <select class="phone_area">
                     <option value="">+86  </option>
                     <option value="">+852  </option>
                     <option value="">+1  </option>
@@ -58,40 +59,6 @@
                     <option value="">+81 </option>
                     <option value="">+65 </option>
                 </select>
-                    <input class="input_pp phone_input" type="text" placeholder="手机号">
-                </div>
-                <div class="msg_container">
-                    <input class="yzm_int" type="text">
-                    <button class="yzm_btn">获取验证码</button>
-                </div>
-                <button class="login_btn">登录</button>
-            </div>
-        </div>
-        <div class="tab_1" style="display:none;">
-            <ul id="last_tabLink">
-                <li class="last_tab_li"><a class="last_tab_link" href="#">账号登录</a></li>
-                <li class="last_tab_li active"><a class="last_tab_link" href="#">免密登录</a></li>
-            </ul>
-            <div>
-                <div class="last_divs" style="display:none">
-                    <form action="">
-                        <input id="" class="input_pp" type="text" placeholder="手机号/邮箱/用户名">
-                        <input class="input_pp" type="password" placeholder="密码">
-                        <button class="search_pwd"> <i class="fa fa-eye"></i></button>
-                    </form>
-                    <a class="pwd_forGet" href="#">忘记密码</a>
-                    <button class="login_btn">登录</button>
-                </div>
-                <div class="last_divs">
-                    <div class="phone_pos">
-                        <select class="phone_area">
-                                    <option value="">+86  </option>
-                                    <option value="">+852  </option>
-                                    <option value="">+1  </option>
-                                    <option value="">+886 </option>
-                                    <option value="">+81 </option>
-                                    <option value="">+65 </option>
-                                </select>
                         <input class="input_pp phone_input" type="text" placeholder="手机号">
                     </div>
                     <div class="msg_container">
@@ -101,22 +68,57 @@
                     <button class="login_btn">登录</button>
                 </div>
             </div>
+            <div class="tab_1" style="display:none;">
+                <ul id="last_tabLink">
+                    <li class="last_tab_li"><a class="last_tab_link" href="#">账号登录</a></li>
+                    <li class="last_tab_li active"><a class="last_tab_link" href="#">免密登录</a></li>
+                </ul>
+                <div>
+                    <div class="last_divs" style="display:none">
+                        <form action="">
+                            <input id="" class="input_pp" type="text" placeholder="手机号/邮箱/用户名">
+                            <input class="input_pp" type="password" placeholder="密码">
+                            <button class="search_pwd"> <i class="fa fa-eye"></i></button>
+                        </form>
+                        <a class="pwd_forGet" href="#">忘记密码</a>
+                        <button class="login_btn">登录</button>
+                    </div>
+                    <div class="last_divs">
+                        <div class="phone_pos">
+                            <select class="phone_area">
+                                    <option value="">+86  </option>
+                                    <option value="">+852  </option>
+                                    <option value="">+1  </option>
+                                    <option value="">+886 </option>
+                                    <option value="">+81 </option>
+                                    <option value="">+65 </option>
+                                </select>
+                            <input class="input_pp phone_input" type="text" placeholder="手机号">
+                        </div>
+                        <div class="msg_container">
+                            <input class="yzm_int" type="text">
+                            <button class="yzm_btn">获取验证码</button>
+                        </div>
+                        <button class="login_btn">登录</button>
+                    </div>
+                </div>
+            </div>
+
+            <ul id="login_list">
+                <li><a class="tab_link" href="#">APP扫码登录</a></li>
+                <li><a class="tab_link" href="#">账号登录</a></li>
+                <li><a class="tab_link" href="#">免密登录</a></li>
+                <li><a class="logo" href="#"><i class="fa fa-qq"></i> </a></li>
+                <li><a class="logo" href="#"><i class="fa fa-weibo"></i></a></li>
+                <li><a class="logo" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="logo" href="#"><i class="fa fa-github"></i></a></li>
+                <li><a class="logo" href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+
         </div>
-
-        <ul id="login_list">
-            <li><a class="tab_link" href="#">APP扫码登录</a></li>
-            <li><a class="tab_link" href="#">账号登录</a></li>
-            <li><a class="tab_link" href="#">免密登录</a></li>
-            <li><a class="logo" href="#"><i class="fa fa-qq"></i> </a></li>
-            <li><a class="logo" href="#"><i class="fa fa-weibo"></i></a></li>
-            <li><a class="logo" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a class="logo" href="#"><i class="fa fa-github"></i></a></li>
-            <li><a class="logo" href="#"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
-
-    </div>
-    <div id="down_container">
-        <a class="down_App" href="#">下载SegmentFault APP</a>
+        <div id="down_container">
+            <a class="down_App" href="#">下载SegmentFault APP</a>
+        </div>
     </div>
 </body>
 
