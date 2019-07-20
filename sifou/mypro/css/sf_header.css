@@ -92,6 +92,10 @@ button[id="searchBtn"] {
     top: 15px;
     color: #009a61;
     font-size: 14px;
+    display: inline-block;
+    width: 56px;
+    height: 30px;
+    border-radius: 0.25rem;
 }
 
 .header a[id="seg"] {

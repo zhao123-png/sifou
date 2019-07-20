@@ -1,82 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--网页头部 	 -->
+<!-- <link rel="stylesheet" href="css/sf_header.css">
+<link rel="stylesheet" href="css/all.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/normalize_zh.css">
+<link rel="stylesheet" href="css/bootstrap.css"> -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/sf_list.css">
-    <link rel="stylesheet" href="./css/sf_header.css">
-    <link rel="stylesheet" href="./css/normalize_zh.css">
-    <link rel="stylesheet" href="./css/bootstrap.css" />
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/all.css">
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/sf.js"></script>
-</head>
-
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <header class="header col-12">
-                <a href="#" id="seg"><span id="sf_span_1">segment</span><span id="sf_span_2">fault</span></a>
-                <p id="p_img"><img id="class_img" src="img/header/sf.gg-tip@2x.png" alt=""></p>
-                <ul id="head_u1">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">问答</a></li>
-                    <li><a href="#">专栏</a></li>
-                    <li><a href="#">课程</a></li>
-                    <li><a href="#">圈子</a></li>
-                    <!-- 
-						Button 下拉菜单
-					<div>
-                        <a id="drop-dow" data-toggle="dropdown" class="btn btn-link dropdown-toggle" href="#">发现</a>
-                        <div class="dropdown-menu">
-                            <a href="#">a</a>
-                            <a href="#">a</a>
-                            <a href="#">a</a>
-                            <a href="#">a</a>
-                        </div>
-                    </div> -->
-                    <li class="drop_list">发现<i style="margin-left:50px;position:relative;top:-25px;" class="fa fa-caret-down"></i>
-
-                        <div id="header_list">
-                            <div id="header_list_left">
-                                <ul>
-                                    <li>活动</li>
-                                    <li>标签</li>
-                                    <li>酷工作</li>
-                                    <li>排行榜</li>
-                                    <li>标签</li>
-                                    <li>徽章</li>
-                                    <li>笔记</li>
-                                    <li>开发手册</li>
-                                    <li>广告投放</li>
-                                </ul>
-                            </div>
-                            <div id="header_list_right">
-                                <a href="#">
-                                    <span>MTSC2019 第五届中国移动互联网测试开发大会</span>
-                                </a>
-                                <p>
-                                    <span>北京</span>·<span>2019-6-28&nbsp;周五</span>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+<a href="#" id="seg"><span id="sf_span_1">segment</span><span id="sf_span_2">fault</span></a>
+<!-- <p id="p_img"><img id="class_img" src="img/header/sf.gg-tip@2x.png" alt=""></p> -->
+<ul id="head_u1">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">问答</a></li>
+    <li><a href="#">专栏</a></li>
+    <li><a href="#">课程</a></li>
+    <li><a href="#">圈子</a></li>
+    <!-- 
+                    Button 下拉菜单
+                <div>
+                    <a id="drop-dow" data-toggle="dropdown" class="btn btn-link dropdown-toggle" href="#">发现</a>
+                    <div class="dropdown-menu">
+                        <a href="#">a</a>
+                        <a href="#">a</a>
+                        <a href="#">a</a>
+                        <a href="#">a</a>
+                    </div>
+                </div> -->
+    <li class="drop_list">发现<i style="margin-left:50px;position:relative;top:-25px;" class="fa fa-caret-down"></i>
+        <div id="header_list">
+            <div id="header_list_left">
+                <ul>
+                    <li>活动</li>
+                    <li>标签</li>
+                    <li>酷工作</li>
+                    <li>排行榜</li>
+                    <li>标签</li>
+                    <li>徽章</li>
+                    <li>笔记</li>
+                    <li>开发手册</li>
+                    <li>广告投放</li>
                 </ul>
-                <form action="" style="position:relative; right:30px;">
-                    <input type="text" id="search" placeholder="搜索问题或输入关键字">
-                    <button id="searchBtn"></button>
-                </form>
-                <a href="sf_login.html" id="login" class="d-md-none d-lg-block">立即登录</a>
-                <a href="#" id="reg" class="d-md-none d-lg-block">免费注册</a>
-            </header>
+            </div>
+            <div id="header_list_right">
+                <a href="#">
+                    <span>MTSC2019 第五届移动互联网测试开发大会</span>
+                </a>
+                <p>
+                    <span>北京</span>·<span>2019-6-28&nbsp;周五</span>
+                    <span>·报名中</span>
+                </p>
+            </div>
         </div>
-    </div>
-</body>
-
-</html>
+    </li>
+</ul>
+<form action="" style="position:relative; right:30px;">
+    <input type="text" id="search" placeholder="搜索问题或输入关键字">
+    <button id="searchBtn"></button>
+</form>
+<a href="sf_login.html" id="login" class="d-md-none d-lg-block">立即登录</a>
+<a href="sf_login.html" id="reg" class="d-md-none d-lg-block">免费注册</a>

@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/all.css">
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/sf.js" defer></script>
+
 
     <style>
         .carousel-indicators li {
@@ -49,18 +46,18 @@
 
 <body onload="list()" style="height:2000px;">
     <!--网页头部 	 -->
-    <div class="container-fluid">
+    <div class="container-fluid px-0">
         <div class="row">
-            <header class="header col-12">
-                <a href="#" id="seg"><span id="sf_span_1">segment</span><span id="sf_span_2">fault</span></a>
-                <!-- <p id="p_img"><img id="class_img" src="img/header/sf.gg-tip@2x.png" alt=""></p> -->
+            <header id="pubHeader" class="header col-12">
+                <!-- <a href="#" id="seg"><span id="sf_span_1">segment</span><span id="sf_span_2">fault</span></a>
+                <p id="p_img"><img id="class_img" src="img/header/sf.gg-tip@2x.png" alt=""></p> 
                 <ul id="head_u1">
                     <li><a href="#">首页</a></li>
                     <li><a href="#">问答</a></li>
                     <li><a href="#">专栏</a></li>
                     <li><a href="#">课程</a></li>
                     <li><a href="#">圈子</a></li>
-                    <!-- 
+                  
 						Button 下拉菜单
 					<div>
                         <a id="drop-dow" data-toggle="dropdown" class="btn btn-link dropdown-toggle" href="#">发现</a>
@@ -70,7 +67,7 @@
                             <a href="#">a</a>
                             <a href="#">a</a>
                         </div>
-                    </div> -->
+                    </div> 
                     <li class="drop_list">发现<i style="margin-left:50px;position:relative;top:-25px;" class="fa fa-caret-down"></i>
                         <div id="header_list">
                             <div id="header_list_left">
@@ -105,376 +102,481 @@
                 <a href="sf_login.html" id="login" class="d-md-none d-lg-block">立即登录</a>
                 <a href="sf_login.html" id="reg" class="d-md-none d-lg-block">免费注册</a>
             </header>
+        </div>  -->
         </div>
-    </div>
-    <!-- 认识网页-->
-    <div id="know-content">
-        <button id="closeKnow" onclick="closeKn()">
+        <!-- 认识网页-->
+        <div id="know-content">
+            <button id="closeKnow" onclick="closeKn()">
 					<i id="times_close" class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
-        <div id="know-content-child" class="mt-4 d-inline-block ">
-            <h4 class="text-light">在 SegmentFault，学习技能、解决问题</h4>
-            <p id="know_des" class="text-light">每个月，我们帮助 1000 万的开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。</p>
+            <div id="know-content-child" class="mt-4 d-inline-block ">
+                <h4 class="text-light">在 SegmentFault，学习技能、解决问题</h4>
+                <p id="know_des" class="text-light">每个月，我们帮助 1000 万的开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。</p>
+            </div>
+            <a href="sf_login.html" id="reg_know" class="btn  know-content-btn bg-light">免费注册</a>
+            <a href="sf_login.html" id="login_know" class="btn  know-content-btn border-light text-light">立即登录</a>
         </div>
-        <a href="sf_login.html" id="reg_know" class="btn  know-content-btn bg-light">免费注册</a>
-        <a href="sf_login.html" id="login_know" class="btn  know-content-btn border-light text-light">立即登录</a>
-    </div>
-    <!--网页内容  -->
-    <div class="container">
-        <div class="row">
-            <div class="content">
-                <!--左栏  -->
-                <aside class="left col-lg-2 d-md-none d-lg-block">
-                    <div class="row">
-                        <div id="left-top" class="col-12">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-newspaper-o mr-1"></i>
-                                        <span> 为你推荐</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-thumbs-o-up mr-2"></i>
-                                        <span>近期热门</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-globe mr-2"></i>
-                                        <span>最新内容</span>
-                                    </a>
-                                </li>
-                            </ul>
+        <!--网页内容  -->
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <!--左栏  -->
+                    <aside class="left col-lg-2 d-md-none d-lg-block">
+                        <div class="row">
+                            <div id="left-top" class="col-12">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-newspaper-o mr-1"></i>
+                                            <span> 为你推荐</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-thumbs-o-up mr-2"></i>
+                                            <span>近期热门</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-globe mr-2"></i>
+                                            <span>最新内容</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="lineZi" class="col-12 mb-3">
+                                <span style="font-size:15px;">技术频道</span>
+                            </div>
+                            <div id="left-bottom" class="col-12 mx-0">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>前端</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>后端</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>小程序</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>人工智能</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>区块链</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>安全</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>Android</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>IOS</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>工具</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>程序员</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>行业</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>sf官方</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
+                                            <span>更多标签</span> </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div id="lineZi" class="col-12 mb-3">
-                            <span style="font-size:15px;">技术频道</span>
+                    </aside>
+                    <!--  中栏-->
+                    <section class="center col-lg-7 col-md-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="pic_causol">
+                                    <div id="silde_logo" class="carousel" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <a href="#"> <img src="./img/caonsul/1.jpg" alt=""></a>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <a href="#"> <img src="./img/caonsul/2.png" alt=""></a>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <a href="#"> <img src="./img/caonsul/3.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <ul class="carousel-indicators">
+                                            <li data-target="#silde_logo" data-slide-to="0" class="active"></li>
+                                            <li data-target="#silde_logo" data-slide-to="1"></li>
+                                            <li data-target="#silde_logo" data-slide-to="2"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div id="tuijian_line" class="col-12 px-0 mt-3">
+                                    为你推荐
+                                </div>
+                            </div>
+                            <div class="col-12" id="center">
+                                <div style="margin-bottom:30px;">
+                                    <a href="#">
+                                        <h4>张开心</h4>
+                                    </a>
+                                    <a href="#">
+                                        <p id="line_wrap">就很开 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam aliquid architecto id esse enim doloremque optio nobis nemo magni tenetur iure error, aperiam, adipisci cupiditate maiores saepe pariatur ex!
+                                        </p>
+                                    </a>
+                                    <a href="#"> <span style="margin-right:20px;">
+                                    <i id="color_gre" style="margin-right:8px;" class="fa fa-thumbs-up">&times;</i> 22赞</span></a>
+                                    <a href="#"><span style="margin-right:20px;"> 张开心 </span></a>
+                                    <a href="#">
+                                        <span>5天前</span>
+                                    </a>
+                                </div>
+                                <div style="margin-bottom:30px;">
+                                    <a href="#">
+                                        <h4>张开心</h4>
+                                    </a>
+                                    <a href="#">
+                                        <p id="line_wrap">就很开 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam aliquid architecto id esse enim doloremque optio nobis nemo magni tenetur iure error, aperiam, adipisci cupiditate maiores saepe pariatur ex!
+                                        </p>
+                                    </a>
+                                    <a href="#"> <span style="margin-right:20px;">
+                                    <i id="color_gre" style="margin-right:8px;" class="fa fa-thumbs-up">&times;</i> 22赞</span></a>
+                                    <a href="#"><span style="margin-right:20px;"> 张开心 </span></a>
+                                    <a href="#">
+                                        <span>5天前</span>
+                                    </a>
+                                </div>
+                                <div style="margin-bottom:30px;">
+                                    <a href="#">
+                                        <h4>张开心</h4>
+                                    </a>
+                                    <a href="#">
+                                        <p id="line_wrap">就很开 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam aliquid architecto id esse enim doloremque optio nobis nemo magni tenetur iure error, aperiam, adipisci cupiditate maiores saepe pariatur ex!
+                                        </p>
+                                    </a>
+                                    <a href="#"> <span style="margin-right:20px;">
+                                    <i id="color_gre" style="margin-right:8px;" class="fa fa-thumbs-up">&times;</i> 22赞</span></a>
+                                    <a href="#"><span style="margin-right:20px;"> 张开心 </span></a>
+                                    <a href="#">
+                                        <span>5天前</span>
+                                    </a>
+                                </div>
+                                <div style="margin-bottom:30px;">
+                                    <a href="#">
+                                        <h4>张开心</h4>
+                                    </a>
+                                    <a href="#">
+                                        <p id="line_wrap">就很开 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam aliquid architecto id esse enim doloremque optio nobis nemo magni tenetur iure error, aperiam, adipisci cupiditate maiores saepe pariatur ex!
+                                        </p>
+                                    </a>
+                                    <a href="#"> <span style="margin-right:20px;">
+                                    <i id="color_gre" style="margin-right:8px;" class="fa fa-thumbs-up">&times;</i> 22赞</span></a>
+                                    <a href="#"><span style="margin-right:20px;"> 张开心 </span></a>
+                                    <a href="#">
+                                        <span>5天前</span>
+                                    </a>
+                                </div>
+                                <div style="margin-bottom:30px;">
+                                    <a href="#">
+                                        <h4>张开心</h4>
+                                    </a>
+                                    <a href="#">
+                                        <p id="line_wrap">就很开 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam aliquid architecto id esse enim doloremque optio nobis nemo magni tenetur iure error, aperiam, adipisci cupiditate maiores saepe pariatur ex!
+                                        </p>
+                                    </a>
+                                    <a href="#"> <span style="margin-right:20px;">
+                                    <i id="color_gre" style="margin-right:8px;" class="fa fa-thumbs-up">&times;</i> 22赞</span></a>
+                                    <a href="#"><span style="margin-right:20px;"> 张开心 </span></a>
+                                    <a href="#">
+                                        <span>5天前</span>
+                                    </a>
+                                </div>
+                                <div style="margin-bottom:30px;">
+                                    <a href="#">
+                                        <h4>张开心</h4>
+                                    </a>
+                                    <a href="#">
+                                        <p id="line_wrap">就很开 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam aliquid architecto id esse enim doloremque optio nobis nemo magni tenetur iure error, aperiam, adipisci cupiditate maiores saepe pariatur ex!
+                                        </p>
+                                    </a>
+                                    <a href="#"> <span style="margin-right:20px;">
+                                    <i id="color_gre" style="margin-right:8px;" class="fa fa-thumbs-up">&times;</i> 22赞</span></a>
+                                    <a href="#"><span style="margin-right:20px;"> 张开心 </span></a>
+                                    <a href="#">
+                                        <span>5天前</span>
+                                    </a>
+                                </div>
+                                <div style="margin-bottom:30px;">
+                                    <a href="#">
+                                        <h4>张开心</h4>
+                                    </a>
+                                    <a href="#">
+                                        <p id="line_wrap">就很开 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ullam aliquid architecto id esse enim doloremque optio nobis nemo magni tenetur iure error, aperiam, adipisci cupiditate maiores saepe pariatur ex!
+                                        </p>
+                                    </a>
+                                    <a href="#"> <span style="margin-right:20px;">
+                                    <i id="color_gre" style="margin-right:8px;" class="fa fa-thumbs-up">&times;</i> 22赞</span></a>
+                                    <a href="#"><span style="margin-right:20px;"> 张开心 </span></a>
+                                    <a href="#">
+                                        <span>5天前</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div id="left-bottom" class="col-12 mx-0">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>前端</span>
+                    </section>
+                    <!-- 	右栏大容器		 -->
+                    <div class="right col-lg-3 d-md-none d-lg-block">
+                        <div class="row">
+                            <!-- 号召兰 -->
+                            <div class="col-12">
+                                <div id="callWrite">
+                                    <a href="#">欢迎号召公司同学一起来思否写文章</a>
+                                </div>
+                            </div>
+                            <!-- 广告位 -->
+                            <div class="col-12">
+                                <div id="payShow">
+                                    <img src="./img/right/1.png" alt="">
+                                    <a href="#">想在上方展示你的广告？</a>
+                                </div>
+                            </div>
+                            <!-- 右栏轮播 -->
+                            <div class="col-12">
+                                <div id="car_right" class="carousel">
+                                    <a id="cktj" href="#">课程推荐</a>
+                                    <a data-slide="prev" class="carousel-control-prev" href="#car_right">
+                                        <span class="carousel-control-prev-icon"></span>
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>后端</span>
+                                    <a data-slide="next" class="carousel-control-next" href="#car_right">
+                                        <span class="carousel-control-next-icon"></span>
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>小程序</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>人工智能</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>区块链</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>安全</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>Android</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>IOS</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>工具</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>程序员</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>行业</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>sf官方</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="./img/left/3997397795-5a6edc1c3167f_small.png" alt="">
-                                        <span>更多标签</span> </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-                <!--  中栏-->
-                <section class="center col-lg-7 col-md-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <div id="pic_causol">
-                                <div id="silde_logo" class="carousel" data-ride="carousel">
-                                    <div class="carousel-inner">
+                                    <div class="carousel-inner" data-ride="carousel">
                                         <div class="carousel-item active">
-                                            <a href="#"> <img src="./img/caonsul/1.jpg" alt=""></a>
+                                            <img class="w-100" src="./img/right/carouse1.png" alt="">
                                         </div>
                                         <div class="carousel-item">
-                                            <a href="#"> <img src="./img/caonsul/2.png" alt=""></a>
+                                            <img class="w-100" src="./img/right/carouse2.png" alt="">
                                         </div>
                                         <div class="carousel-item">
-                                            <a href="#"> <img src="./img/caonsul/3.png" alt=""></a>
+                                            <img class="w-100" src="./img/right/carouse3.png" alt="">
                                         </div>
                                     </div>
-                                    <ul class="carousel-indicators">
-                                        <li data-target="#silde_logo" data-slide-to="0" class="active"></li>
-                                        <li data-target="#silde_logo" data-slide-to="1"></li>
-                                        <li data-target="#silde_logo" data-slide-to="2"></li>
-                                    </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div id="tuijian_line" class="col-12 px-0 mt-3">
-                                为你推荐
-                            </div>
-                        </div>
-                        <div class="col-12" id="center">
-
-                        </div>
-                    </div>
-                </section>
-                <!-- 	右栏大容器		 -->
-                <div class="right col-lg-3 d-md-none d-lg-block">
-                    <div class="row">
-                        <!-- 号召兰 -->
-                        <div class="col-12">
-                            <div id="callWrite">
-                                <a href="#">欢迎号召公司同学一起来思否写文章</a>
-                            </div>
-                        </div>
-                        <!-- 广告位 -->
-                        <div class="col-12">
-                            <div id="payShow">
-                                <img src="./img/right/1.png" alt="">
-                                <a href="#">想在上方展示你的广告？</a>
-                            </div>
-                        </div>
-                        <!-- 右栏轮播 -->
-                        <div class="col-12">
-                            <div id="car_right" class="carousel">
-                                <a id="cktj" href="#">课程推荐</a>
-                                <a data-slide="prev" class="carousel-control-prev" href="#car_right">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </a>
-                                <a data-slide="next" class="carousel-control-next" href="#car_right">
-                                    <span class="carousel-control-next-icon"></span>
-                                </a>
-                                <div class="carousel-inner" data-ride="carousel">
-                                    <div class="carousel-item active">
-                                        <img class="w-100" src="./img/right/carouse1.png" alt="">
+                            <!-- 活动推荐 -->
+                            <div class="col-12  pl-0">
+                                <div class="row" style="position:relative;">
+                                    <div class="col-6">
+                                        <div>
+                                            活动推荐
+                                        </div>
                                     </div>
-                                    <div class="carousel-item">
-                                        <img class="w-100" src="./img/right/carouse2.png" alt="">
+                                    <div style="text-align:right;" class="col-6">
+                                        <a href="#">更多</a>
                                     </div>
-                                    <div class="carousel-item">
-                                        <img class="w-100" src="./img/right/carouse3.png" alt="">
+                                    <div class="col-12" id="mse_list">
+                                        <ul>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <div class="row siza_color_container  d-inline-block">
+                                                            <div class="col-12">
+                                                                <div class="size_color">JUN</div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="size_color2">27</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div>
+                                                                    <div class="detail_title">
+                                                                        <div>
+                                                                            万科杭州产城X微软加速器黑客松工作坊
+                                                                        </div>
+                                                                        <span>杭州.6&nbsp;&nbsp;27</span>
+                                                                        <span>周四.&nbsp;&nbsp;</span>
+                                                                        <span>报名中</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <div class="row  d-inline-block">
+                                                            <div class="col-12">
+                                                                <div class="size_color">JUN</div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="size_color2">27</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div>
+                                                                    <div class="detail_title">
+                                                                        <div>
+                                                                            万科杭州产城X微软加速器黑客松工作坊
+                                                                        </div>
+                                                                        <span>杭州.6&nbsp;&nbsp;27</span>
+                                                                        <span>周四.&nbsp;&nbsp;</span>
+                                                                        <span>报名中</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <div class="row  d-inline-block">
+                                                            <div class="col-12">
+                                                                <div class="size_color">JUN</div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="size_color2">27</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div>
+                                                                    <div class="detail_title">
+                                                                        <div>
+                                                                            万科杭州产城X微软加速器黑客松工作坊
+                                                                        </div>
+                                                                        <span>杭州.6&nbsp;&nbsp;27</span>
+                                                                        <span>周四.&nbsp;&nbsp;</span>
+                                                                        <span>报名中</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <div class="row  d-inline-block">
+                                                            <div class=" col-12">
+                                                                <div class="size_color">JUN</div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="size_color2">27</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div>
+                                                                    <div class="detail_title">
+                                                                        <div>
+                                                                            万科杭州产城X微软加速器黑客松工作坊
+                                                                        </div>
+                                                                        <span>杭州.6&nbsp;&nbsp;27</span>
+                                                                        <span>周四.&nbsp;&nbsp;</span>
+                                                                        <span>报名中</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <div class="row  d-inline-block">
+                                                            <div class="col-12">
+                                                                <div class="size_color">JUN</div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="size_color2">27</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div>
+                                                                    <div class="detail_title">
+                                                                        <div>
+                                                                            万科杭州产城X微软加速器黑客松工作坊
+                                                                        </div>
+                                                                        <span>杭州.6&nbsp;&nbsp;27</span>
+                                                                        <span>周四.&nbsp;&nbsp;</span>
+                                                                        <span>报名中</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 活动推荐 -->
-                        <div class="col-12  pl-0">
-                            <div class="row" style="position:relative;">
-                                <div class="col-6">
-                                    <div>
-                                        活动推荐
-                                    </div>
-                                </div>
-                                <div style="text-align:right;" class="col-6">
-                                    <a href="#">更多</a>
-                                </div>
-                                <div class="col-12" id="mse_list">
-                                    <ul>
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-2">
-                                                    <div class="row siza_color_container  d-inline-block">
-                                                        <div class="col-12">
-                                                            <div class="size_color">JUN</div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="size_color2">27</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-10">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div>
-                                                                <div class="detail_title">
-                                                                    <div>
-                                                                        万科杭州产城X微软加速器黑客松工作坊
-                                                                    </div>
-                                                                    <span>杭州.6&nbsp;&nbsp;27</span>
-                                                                    <span>周四.&nbsp;&nbsp;</span>
-                                                                    <span>报名中</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-2">
-                                                    <div class="row  d-inline-block">
-                                                        <div class="col-12">
-                                                            <div class="size_color">JUN</div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="size_color2">27</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-10">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div>
-                                                                <div class="detail_title">
-                                                                    <div>
-                                                                        万科杭州产城X微软加速器黑客松工作坊
-                                                                    </div>
-                                                                    <span>杭州.6&nbsp;&nbsp;27</span>
-                                                                    <span>周四.&nbsp;&nbsp;</span>
-                                                                    <span>报名中</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-2">
-                                                    <div class="row  d-inline-block">
-                                                        <div class="col-12">
-                                                            <div class="size_color">JUN</div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="size_color2">27</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-10">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div>
-                                                                <div class="detail_title">
-                                                                    <div>
-                                                                        万科杭州产城X微软加速器黑客松工作坊
-                                                                    </div>
-                                                                    <span>杭州.6&nbsp;&nbsp;27</span>
-                                                                    <span>周四.&nbsp;&nbsp;</span>
-                                                                    <span>报名中</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-2">
-                                                    <div class="row  d-inline-block">
-                                                        <div class=" col-12">
-                                                            <div class="size_color">JUN</div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="size_color2">27</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-10">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div>
-                                                                <div class="detail_title">
-                                                                    <div>
-                                                                        万科杭州产城X微软加速器黑客松工作坊
-                                                                    </div>
-                                                                    <span>杭州.6&nbsp;&nbsp;27</span>
-                                                                    <span>周四.&nbsp;&nbsp;</span>
-                                                                    <span>报名中</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-2">
-                                                    <div class="row  d-inline-block">
-                                                        <div class="col-12">
-                                                            <div class="size_color">JUN</div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="size_color2">27</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-10">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div>
-                                                                <div class="detail_title">
-                                                                    <div>
-                                                                        万科杭州产城X微软加速器黑客松工作坊
-                                                                    </div>
-                                                                    <span>杭州.6&nbsp;&nbsp;27</span>
-                                                                    <span>周四.&nbsp;&nbsp;</span>
-                                                                    <span>报名中</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="adv_show" class="col-12">
-                                    <div id="adv_child1" class="col-12">
-                                        <span>广告</span> <i id="logo_close" class="fa fa-times"></i>
-                                        <div id="fontContainer">
-                                            <h4>
-                                                <a href="#">视频通话</a>
-                                            </h4>
-                                            <p>
-                                                <a href="#">www.orga.com</a>
-                                            </p>
-                                            <p>
-                                                <a href="#">
+                                    <div id="adv_show" class="col-12">
+                                        <div id="adv_child1" class="col-12">
+                                            <span>广告</span> <i id="logo_close" class="fa fa-times"></i>
+                                            <div id="fontContainer">
+                                                <h4>
+                                                    <a href="#">视频通话</a>
+                                                </h4>
+                                                <p>
+                                                    <a href="#">www.orga.com</a>
+                                                </p>
+                                                <p>
+                                                    <a href="#">
                                                 声网Agora.io，API接口，4行代码接入。每月1万分钟免费。 
                                                 </a>
-                                            </p>
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div id="adv_child2" class="col-12">、
-                                        <button id="open_btn_adv">打开</button>
+                                        <div id="adv_child2" class="col-12">、
+                                            <button id="open_btn_adv">打开</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -483,13 +585,23 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- 锚点 -->
-    <div id="trrget_">
-        <a id="goBack" href="#">
+        <div id="footer_container">
+
+        </div>
+        <!-- 锚点 -->
+        <div id="trrget_">
+            <a id="goBack" href="#">
             回顶部
         </a>
+        </div>
     </div>
 </body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/sf.js"></script>
+<script src="./js/ajax.js"></script>
+<script src="./js/header.js"></script>
+<script src="./js/footer.js"></script>
 
 </html>

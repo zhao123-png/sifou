@@ -291,7 +291,6 @@ function closeKn() {
 }
 
 //回到顶部显示隐藏
-;
 (function() {
     var getDiv = document.getElementById("trrget_");
     var a = document.getElementById("goBack");
@@ -302,7 +301,7 @@ function closeKn() {
             window.scrollTo(0, 0);
         }
         //获取window的滚动条事件
-    window.onscroll = function() {
+    window.addEventListener("scroll", function() {
         var scrollTop = document.documentElement.scrollTop || this.document.body.scrollTop;
         if (scrollTop > 400) {
             getDiv.style.display = "block";
@@ -310,9 +309,8 @@ function closeKn() {
         } else {
             getDiv.style.display = "none";
         }
-    }
+    });
 })();
-
 //广告
 ;
 (function() {
